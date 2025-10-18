@@ -5,163 +5,174 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background-color: #f5f5f0;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.8;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     padding: 40px 20px;
-    flex: 1;
 }
 
-.memorial-image {
-    text-align: center;
+.memorial-container {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.portrait-section {
+    flex: 0 0 auto;
+    max-width: 560px;
+}
+
+.portrait-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-section {
+    flex: 1;
+    max-width: 700px;
+}
+
+.memorial-text h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+}
+
+.dates {
+    font-size: 1.5rem;
+    font-weight: 300;
     margin-bottom: 40px;
 }
 
-.memorial-image img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.tribute {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 40px;
 }
 
-.content {
-    max-width: 800px;
-    margin: 0 auto;
+.service-info {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.8;
 }
 
-.livestream-section,
-.details-section {
-    background: white;
-    padding: 30px;
+.service-info p {
     margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
+.service-info a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
 }
 
-h3 {
-    font-size: 1.3rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #34495e;
+.service-info a:hover {
+    opacity: 0.7;
 }
 
-.livestream-section p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.livestream-link {
-    display: inline-block;
-    background-color: #5a6c7d;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    margin: 10px 0;
-}
-
-.livestream-link:hover {
-    background-color: #4a5c6d;
-}
-
-.livestream-link:active {
-    transform: translateY(1px);
-}
-
-.livestream-note {
-    font-size: 0.95rem;
-    color: #666;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-.details-content p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.details-content strong {
-    color: #2c3e50;
-}
-
-footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
-}
-
-footer p {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-footer em {
-    color: #bdc3c7;
+.pooja-info {
+    margin-top: 30px;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px 15px;
+@media (max-width: 1200px) {
+    .memorial-container {
+        gap: 40px;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    .portrait-section {
+        max-width: 450px;
     }
 
-    h3 {
-        font-size: 1.2rem;
+    .memorial-text h1 {
+        font-size: 1.8rem;
     }
 
-    .livestream-section,
-    .details-section {
-        padding: 20px;
+    .dates {
+        font-size: 1.3rem;
     }
 
-    .livestream-link {
-        display: block;
+    .tribute,
+    .service-info {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .memorial-container {
+        flex-direction: column;
+        gap: 30px;
         text-align: center;
     }
 
-    footer {
+    .portrait-section {
+        max-width: 500px;
+    }
+
+    .memorial-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .dates {
+        font-size: 1.2rem;
+    }
+
+    .tribute,
+    .service-info {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
         padding: 20px 15px;
-        font-size: 0.95rem;
+    }
+
+    .memorial-container {
+        gap: 20px;
+    }
+
+    .memorial-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .dates {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    .tribute {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .service-info {
+        font-size: 1rem;
+    }
+
+    .service-info p {
+        margin-bottom: 20px;
     }
 }
 
 @media print {
     body {
         background: white;
+        color: black;
     }
 
-    .livestream-section {
-        page-break-inside: avoid;
-    }
-
-    .memorial-image img {
-        box-shadow: none;
+    .service-info a {
+        color: black;
     }
 }
