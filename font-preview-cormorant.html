@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cormorant Style Font Variations - Heavier Weights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Cormorant:wght@400;500;600&family=Cinzel:wght@400;500;600&family=Bodoni+Moda:wght@400;500;600&family=Spectral:wght@300;400;500&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+        }
+
+        .instructions {
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions h1 {
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .instructions p {
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .font-option {
+            max-width: 1400px;
+            margin: 0 auto 60px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .font-label {
+            background: #333;
+            color: white;
+            padding: 20px 30px;
+            font-family: Arial, sans-serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .font-preview {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 60px 40px;
+        }
+
+        .preview-container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .preview-portrait {
+            flex: 0 0 auto;
+            max-width: 400px;
+            width: 40%;
+        }
+
+        .preview-portrait img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .preview-content {
+            flex: 1;
+            max-width: 700px;
+        }
+
+        .preview-content h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            letter-spacing: 0.02em;
+        }
+
+        .preview-content .dates {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .preview-content .tribute {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .preview-content .service-info {
+            font-size: 1.25rem;
+            line-height: 1.8;
+        }
+
+        .preview-content .service-info p {
+            margin-bottom: 30px;
+        }
+
+        /* Font Variations */
+
+        /* Option 1: Cormorant Garamond Medium Weight */
+        .font-cormorant-medium {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .font-cormorant-medium h1 {
+            font-weight: 500;
+        }
+        .font-cormorant-medium .dates,
+        .font-cormorant-medium .tribute,
+        .font-cormorant-medium .service-info {
+            font-weight: 400;
+        }
+
+        /* Option 2: Cormorant Garamond Semi-Bold */
+        .font-cormorant-semibold {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .font-cormorant-semibold h1 {
+            font-weight: 600;
+        }
+        .font-cormorant-semibold .dates,
+        .font-cormorant-semibold .tribute,
+        .font-cormorant-semibold .service-info {
+            font-weight: 400;
+        }
+
+        /* Option 3: Cormorant (Regular variant, slightly bolder) */
+        .font-cormorant-regular {
+            font-family: 'Cormorant', serif;
+        }
+        .font-cormorant-regular h1 {
+            font-weight: 500;
+        }
+        .font-cormorant-regular .dates,
+        .font-cormorant-regular .tribute,
+        .font-cormorant-regular .service-info {
+            font-weight: 400;
+        }
+
+        /* Option 4: Cormorant Semi-Bold */
+        .font-cormorant-semi {
+            font-family: 'Cormorant', serif;
+        }
+        .font-cormorant-semi h1 {
+            font-weight: 600;
+        }
+        .font-cormorant-semi .dates,
+        .font-cormorant-semi .tribute,
+        .font-cormorant-semi .service-info {
+            font-weight: 500;
+        }
+
+        /* Option 5: Cinzel (Similar elegant style, more weight) */
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        .font-cinzel h1 {
+            font-weight: 500;
+        }
+        .font-cinzel .dates,
+        .font-cinzel .tribute,
+        .font-cinzel .service-info {
+            font-weight: 400;
+        }
+
+        /* Option 6: Bodoni Moda (Classic elegant serif, heavier) */
+        .font-bodoni {
+            font-family: 'Bodoni Moda', serif;
+        }
+        .font-bodoni h1 {
+            font-weight: 600;
+        }
+        .font-bodoni .dates,
+        .font-bodoni .tribute,
+        .font-bodoni .service-info {
+            font-weight: 500;
+        }
+
+        /* Option 7: Spectral (Similar to Cormorant, slightly heavier) */
+        .font-spectral {
+            font-family: 'Spectral', serif;
+        }
+        .font-spectral h1 {
+            font-weight: 500;
+        }
+        .font-spectral .dates,
+        .font-spectral .tribute,
+        .font-spectral .service-info {
+            font-weight: 400;
+        }
+
+        /* Option 8: Cardo (Classic book face with more presence) */
+        .font-cardo {
+            font-family: 'Cardo', serif;
+        }
+        .font-cardo h1 {
+            font-weight: 700;
+        }
+        .font-cardo .dates,
+        .font-cardo .tribute,
+        .font-cardo .service-info {
+            font-weight: 400;
+        }
+
+        @media (max-width: 900px) {
+            .preview-container {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .preview-portrait {
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .preview-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .preview-content .dates {
+                font-size: 1.2rem;
+            }
+
+            .preview-content .tribute,
+            .preview-content .service-info {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Cormorant-Style Fonts - Heavier Weight Variations</h1>
+        <p>These options are similar to Cormorant Garamond but with more weight/presence. Options 1-4 are variations of Cormorant itself, while 5-8 are similar elegant serif fonts with comparable aesthetics but heavier weights.</p>
+    </div>
+
+    <!-- Option 1: Cormorant Garamond - Medium Weight -->
+    <div class="font-option">
+        <div class="font-label">Option 1: Cormorant Garamond - Medium Weight (400/500)</div>
+        <div class="font-preview font-cormorant-medium">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 2: Cormorant Garamond - Semi-Bold -->
+    <div class="font-option">
+        <div class="font-label">Option 2: Cormorant Garamond - Semi-Bold (600/400)</div>
+        <div class="font-preview font-cormorant-semibold">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 3: Cormorant (Regular variant) -->
+    <div class="font-option">
+        <div class="font-label">Option 3: Cormorant - Regular Variant (500/400)</div>
+        <div class="font-preview font-cormorant-regular">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 4: Cormorant Semi-Bold All -->
+    <div class="font-option">
+        <div class="font-label">Option 4: Cormorant - Semi-Bold Throughout (600/500)</div>
+        <div class="font-preview font-cormorant-semi">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 5: Cinzel -->
+    <div class="font-option">
+        <div class="font-label">Option 5: Cinzel - Elegant & Strong (500/400)</div>
+        <div class="font-preview font-cinzel">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 6: Bodoni Moda -->
+    <div class="font-option">
+        <div class="font-label">Option 6: Bodoni Moda - Classic Elegance with Weight (600/500)</div>
+        <div class="font-preview font-bodoni">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 7: Spectral -->
+    <div class="font-option">
+        <div class="font-label">Option 7: Spectral - Similar to Cormorant, More Presence (500/400)</div>
+        <div class="font-preview font-spectral">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 8: Cardo -->
+    <div class="font-option">
+        <div class="font-label">Option 8: Cardo - Classic Book Face with Strong Presence (700/400)</div>
+        <div class="font-preview font-cardo">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cormorant Font - Size Variations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+        }
+
+        .instructions {
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions h1 {
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .instructions p {
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .font-option {
+            max-width: 1400px;
+            margin: 0 auto 60px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .font-label {
+            background: #333;
+            color: white;
+            padding: 20px 30px;
+            font-family: Arial, sans-serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .font-preview {
+            font-family: 'Cormorant', serif;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 60px 40px;
+        }
+
+        .preview-container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .preview-portrait {
+            flex: 0 0 auto;
+            max-width: 400px;
+            width: 40%;
+        }
+
+        .preview-portrait img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .preview-content {
+            flex: 1;
+            max-width: 700px;
+        }
+
+        .preview-content h1 {
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            letter-spacing: 0.02em;
+        }
+
+        .preview-content .dates {
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .preview-content .tribute {
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .preview-content .service-info {
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .preview-content .service-info p {
+            margin-bottom: 30px;
+        }
+
+        /* Size Variations */
+
+        /* Current/Default - Option 1 */
+        .size-default h1 {
+            font-size: 2rem;
+        }
+        .size-default .dates {
+            font-size: 1.5rem;
+        }
+        .size-default .tribute,
+        .size-default .service-info {
+            font-size: 1.25rem;
+        }
+
+        /* Slightly Smaller - Option 2 */
+        .size-smaller h1 {
+            font-size: 1.8rem;
+        }
+        .size-smaller .dates {
+            font-size: 1.35rem;
+        }
+        .size-smaller .tribute,
+        .size-smaller .service-info {
+            font-size: 1.15rem;
+        }
+
+        /* Much Smaller - Option 3 */
+        .size-much-smaller h1 {
+            font-size: 1.6rem;
+        }
+        .size-much-smaller .dates {
+            font-size: 1.2rem;
+        }
+        .size-much-smaller .tribute,
+        .size-much-smaller .service-info {
+            font-size: 1.05rem;
+        }
+
+        /* Slightly Larger - Option 4 */
+        .size-larger h1 {
+            font-size: 2.2rem;
+        }
+        .size-larger .dates {
+            font-size: 1.65rem;
+        }
+        .size-larger .tribute,
+        .size-larger .service-info {
+            font-size: 1.35rem;
+        }
+
+        /* Much Larger - Option 5 */
+        .size-much-larger h1 {
+            font-size: 2.5rem;
+        }
+        .size-much-larger .dates {
+            font-size: 1.85rem;
+        }
+        .size-much-larger .tribute,
+        .size-much-larger .service-info {
+            font-size: 1.5rem;
+        }
+
+        /* Larger Heading, Normal Body - Option 6 */
+        .size-large-heading h1 {
+            font-size: 2.5rem;
+        }
+        .size-large-heading .dates {
+            font-size: 1.5rem;
+        }
+        .size-large-heading .tribute,
+        .size-large-heading .service-info {
+            font-size: 1.2rem;
+        }
+
+        /* Normal Heading, Larger Body - Option 7 */
+        .size-large-body h1 {
+            font-size: 2rem;
+        }
+        .size-large-body .dates {
+            font-size: 1.65rem;
+        }
+        .size-large-body .tribute,
+        .size-large-body .service-info {
+            font-size: 1.45rem;
+        }
+
+        /* Compact - Option 8 */
+        .size-compact h1 {
+            font-size: 1.75rem;
+        }
+        .size-compact .dates {
+            font-size: 1.3rem;
+        }
+        .size-compact .tribute,
+        .size-compact .service-info {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 900px) {
+            .preview-container {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .preview-portrait {
+                max-width: 500px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Cormorant Font - Size Variations</h1>
+        <p>All options below use the Cormorant font with Semi-Bold weights. Only the font sizes vary. Select your preferred sizing.</p>
+    </div>
+
+    <!-- Option 1: Current/Default Sizes -->
+    <div class="font-option">
+        <div class="font-label">Option 1: Current Size (h1: 2rem, body: 1.25rem) - CURRENTLY LIVE</div>
+        <div class="font-preview size-default">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 2: Slightly Smaller -->
+    <div class="font-option">
+        <div class="font-label">Option 2: Slightly Smaller (h1: 1.8rem, body: 1.15rem)</div>
+        <div class="font-preview size-smaller">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 3: Much Smaller -->
+    <div class="font-option">
+        <div class="font-label">Option 3: Much Smaller (h1: 1.6rem, body: 1.05rem)</div>
+        <div class="font-preview size-much-smaller">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 4: Slightly Larger -->
+    <div class="font-option">
+        <div class="font-label">Option 4: Slightly Larger (h1: 2.2rem, body: 1.35rem)</div>
+        <div class="font-preview size-larger">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 5: Much Larger -->
+    <div class="font-option">
+        <div class="font-label">Option 5: Much Larger (h1: 2.5rem, body: 1.5rem)</div>
+        <div class="font-preview size-much-larger">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 6: Larger Heading, Normal Body -->
+    <div class="font-option">
+        <div class="font-label">Option 6: Larger Heading Only (h1: 2.5rem, body: 1.2rem)</div>
+        <div class="font-preview size-large-heading">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 7: Normal Heading, Larger Body -->
+    <div class="font-option">
+        <div class="font-label">Option 7: Larger Body Text (h1: 2rem, body: 1.45rem)</div>
+        <div class="font-preview size-large-body">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 8: Compact -->
+    <div class="font-option">
+        <div class="font-label">Option 8: Compact (h1: 1.75rem, body: 1.1rem)</div>
+        <div class="font-preview size-compact">
+            <div class="preview-container">
+                <div class="preview-portrait">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="preview-content">
+                    <h1>Neerja Badhwar (Neena)</h1>
+                    <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                    <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pioneering newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    <div class="service-info">
+                        <p>Please join us to celebrate her life at 2:00 pm on Wednesday, 22 October, at the Lotus Pavilion, Macquarie Park Cemetery & Crematorium, corner Plassey and Delhi Roads, Macquarie Park, NSW 2113.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
