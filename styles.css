@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Cormorant', serif;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     line-height: 1.8;
     min-height: 100vh;
     display: flex;
@@ -72,7 +72,7 @@ body {
 }
 
 .service-info a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: underline;
     transition: opacity 0.3s ease;
 }
