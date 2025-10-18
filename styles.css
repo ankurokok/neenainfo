@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #f5f5f0;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex: 1;
+}
+
+.memorial-image {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.memorial-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.livestream-section,
+.details-section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.livestream-section p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.livestream-link {
+    display: inline-block;
+    background-color: #5a6c7d;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+}
+
+.livestream-link:hover {
+    background-color: #4a5c6d;
+}
+
+.livestream-link:active {
+    transform: translateY(1px);
+}
+
+.livestream-note {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.details-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.details-content strong {
+    color: #2c3e50;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+footer em {
+    color: #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .livestream-section,
+    .details-section {
+        padding: 20px;
+    }
+
+    .livestream-link {
+        display: block;
+        text-align: center;
+    }
+
+    footer {
+        padding: 20px 15px;
+        font-size: 0.95rem;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .livestream-section {
+        page-break-inside: avoid;
+    }
+
+    .memorial-image img {
+        box-shadow: none;
+    }
+}
