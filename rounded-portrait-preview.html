@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rounded Portrait Edge Options</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+        }
+
+        .instructions {
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .instructions p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .option-container {
+            max-width: 1400px;
+            margin: 0 auto 60px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .option-label {
+            background: #333;
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .preview-section {
+            font-family: 'Cormorant', serif;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 60px 40px;
+        }
+
+        .preview-container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .portrait-section {
+            flex: 0 0 auto;
+            max-width: 560px;
+            width: 40%;
+        }
+
+        .portrait-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content-section {
+            flex: 1;
+            max-width: 700px;
+        }
+
+        .memorial-text h1 {
+            font-family: 'Cormorant', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            letter-spacing: 0.02em;
+        }
+
+        .dates {
+            font-family: 'Cormorant', serif;
+            font-size: 1.85rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .tribute {
+            font-family: 'Cormorant', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        /* Rounded corner options */
+        .no-radius img {
+            border-radius: 0;
+        }
+
+        .small-radius img {
+            border-radius: 8px;
+        }
+
+        .medium-radius img {
+            border-radius: 16px;
+        }
+
+        .large-radius img {
+            border-radius: 24px;
+        }
+
+        .very-large-radius img {
+            border-radius: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .preview-container {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .portrait-section {
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .memorial-text h1 {
+                font-size: 2rem;
+            }
+
+            .dates {
+                font-size: 1.5rem;
+            }
+
+            .tribute {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Rounded Portrait Edge Options</h1>
+        <p>Compare different levels of rounding for the portrait edges. Select your preferred option.</p>
+    </div>
+
+    <!-- Option 1: No Rounding (Current) -->
+    <div class="option-container">
+        <div class="option-label">Option 1: No Rounding (Sharp Corners) - CURRENT</div>
+        <div class="preview-section">
+            <div class="preview-container">
+                <div class="portrait-section no-radius">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="content-section">
+                    <div class="memorial-text">
+                        <h1>Neerja Badhwar (Neena)</h1>
+                        <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                        <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pathbreaking newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 2: Small Radius -->
+    <div class="option-container">
+        <div class="option-label">Option 2: Slight Rounding (8px)</div>
+        <div class="preview-section">
+            <div class="preview-container">
+                <div class="portrait-section small-radius">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="content-section">
+                    <div class="memorial-text">
+                        <h1>Neerja Badhwar (Neena)</h1>
+                        <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                        <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pathbreaking newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 3: Medium Radius -->
+    <div class="option-container">
+        <div class="option-label">Option 3: Medium Rounding (16px)</div>
+        <div class="preview-section">
+            <div class="preview-container">
+                <div class="portrait-section medium-radius">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="content-section">
+                    <div class="memorial-text">
+                        <h1>Neerja Badhwar (Neena)</h1>
+                        <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                        <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pathbreaking newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 4: Large Radius -->
+    <div class="option-container">
+        <div class="option-label">Option 4: Large Rounding (24px)</div>
+        <div class="preview-section">
+            <div class="preview-container">
+                <div class="portrait-section large-radius">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="content-section">
+                    <div class="memorial-text">
+                        <h1>Neerja Badhwar (Neena)</h1>
+                        <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                        <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pathbreaking newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 5: Very Large Radius -->
+    <div class="option-container">
+        <div class="option-label">Option 5: Very Large Rounding (32px)</div>
+        <div class="preview-section">
+            <div class="preview-container">
+                <div class="portrait-section very-large-radius">
+                    <img src="neena_portrait.jpg" alt="Portrait">
+                </div>
+                <div class="content-section">
+                    <div class="memorial-text">
+                        <h1>Neerja Badhwar (Neena)</h1>
+                        <p class="dates">(7 April 1952 - 17 October 2025)</p>
+                        <p class="tribute">A beloved family member and friend; a valued contributor to her community; a pathbreaking newspaper editor; and a lifelong lover of literature, culture and language.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
